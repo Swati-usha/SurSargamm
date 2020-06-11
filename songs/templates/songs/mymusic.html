@@ -1,0 +1,30 @@
+{% extends 'songs/base1.html' %}
+{% load static %}
+{% block content %}
+
+<section class="container">
+  <div class="row">
+    <img src="{% static 'songs/6.jpg' %}" class ="img-fluid" alt="music" >
+  </div>
+  <div>
+  <ul>
+      {% if user.is_authenticated  %}
+
+      <h2>Create Your Own Playlist  {{ user.username }}</h2>
+      <a href="{% url 'songs:createmysongs' %}" class="btn btn-primary">Create</a>
+      {% endif %}
+       {% for m in music %}
+       <li>
+          {% if m.Favourite %}<b>{% endif %}<a href="{{m.Link}}"target = "_blank">{{ m.PlaylistName }}</a>{% if m.favourite %}</b>{% endif %}
+       </li>
+       {% endfor %}
+       <br>
+
+    </ul>
+    </div>
+</section>
+
+
+
+
+{% endblock %}

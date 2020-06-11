@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,300;1,300&family=Metal+Mania&display=swap" rel="stylesheet">
+    <title>SurSargam</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Welcome</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Treasures
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{% url 'poetry:all_poetry' %}">Poetry</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{% url 'testimonials:all_testimonials' %}">Testimonials</a>
+
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'mymusic' %}">mymusic</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Music Portals
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="https://www.spotify.com/in/" target="_blank" >Spotify</a>
+          <a class="dropdown-item" href="https://www.smule.com/" target="_blank" >Smule for Singing</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="https://www.youtube.com" target= "_blank" >Youtube</a>
+
+        </div>
+      </li>
+    </ul>
+
+  </div>
+  </nav>
+
+{% load static %}
+
+<section class ="container-fluid" >
+  <div class="row">
+    <img src = "{% static 'poetry/1.jpg' %}" class="image-fluid"width = "auto" >
+  </div>
+</section>
+<section class ="container-fluid" id ="poetry">
+    <div >
+    <a href="https://www.shayarism.com/dosti" target="_blank"><h1>Shayari</h1></a>
+    <p >Shayari has unique charm and the ability to mesmerise.
+     When you encounter shayari, the whole atmosphere changes and you forget all about your worldly tasks.
+     It has the ability of making even the painful events as sweet by its tone and expression.
+     Poetry has the power to highlight all your senses and make you see beyond the world in front of you.
+     When you allow yourself to be consumed by poetry, you open a world for yourself where everything is
+     possible and nothing is what it seems.
+     This magical world will make you fall in love with it and you will come back for more again and again.</p>
+    </div>
+    <p>Please visit us soon ....This section is still in development phase.</p>
+</section>
+<!--<section>
+      <div class ="container-fluid">
+          <h2> we have {{poetrys.count}} shayari{{poetrys.count| pluralize}}</h2>
+           {% for poetry in poetrys %}
+             <a href="#">{{poetry.Title}}</a>
+             <br>
+             {{poetry.description}}
+             <br>
+             {{poetry.author}}
+             <br>
+          {% endfor %}
+    </div>
+</section>-->
+
+
+<br>
+<br>
+
+{% block content %}{% endblock %}
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <footer class="text-center bg-dark text-white">
+    <p> &copy;2020 SurSargam, Inc. All Rights Reserved.</p>
+
+  </footer>
+
+
+</body>
+</html>

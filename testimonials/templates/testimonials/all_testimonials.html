@@ -1,0 +1,17 @@
+{% extends "songs/base1.html"  %}
+{% load static %}
+
+{% block content %}
+
+<img src = "{% static 'testimonials/t.png' %}" width= 1200>
+<h1> Testimonials are merely a Tribute. Feel free to priveledge us by letting us know How you felt, we would love to publish them.</h1>
+
+<br>
+{% for t in test %}
+<h3>{{ t.Name}}</h3>
+{{ t.Message }}
+
+<br>
+{% endfor %}
+
+{% endblock  %}

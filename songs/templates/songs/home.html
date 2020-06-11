@@ -1,0 +1,126 @@
+{% extends "songs/base.html" %}
+
+{% load static %}
+{% block content %}
+
+<!--About section-->
+<section class="container" id="home">
+  <div class ="container-fluid">
+      <p class =" text-center text-capitalize pt-5">“Music gives a soul to the universe, wings to the mind, flight to the imagination and life to everything.”</p>
+      <hr class ="w-25 mx-auto">
+      <p class =" text-center text-capitalize pt-5">“Painting is silent poetry and poetry is painting that speaks.”</p>
+      <hr class ="w-25 mx-auto">
+      <br>
+  </div>
+
+<div class="row ">
+    <div>
+    <h1>Ethereal Music:Healing Ragas</h1>
+    <p>A Rendition of Classical Instrumental Fusion Music | Raag Bihag | Indian Classical Music - B. Sivaramakrishna Rao </p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/TXSb_OIMNQg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <br>
+    <br>
+  </div>
+</section>
+
+
+
+
+
+
+<section id ="saga">
+  <div class="container-fluid">
+        <h1 class= "text-center text-capitalize">saga</h1>
+        <hr class ="w-25 mx-auto">
+
+      <div class="row mb-5">
+            <div class ="col-lg-6 col-md-6 col-12">
+                  <img src="{% static 'songs/displaypic.jpg' %}" class ="img-fluid">
+            </div>
+
+            <div class ="col-lg-6 col-md-6 col-12 ">
+              <a href="https://www.youtube.com/watch?v=oPJ-f9BPBVw" target="_blank">Sare Gama Caravan Collection</a>
+              <br>
+              <a href="https://www.youtube.com/watch?v=_B7cvXQp1bU" target="_blank">Aaj Jaane ki zid</a>
+              <br>
+              <a href="https://www.youtube.com/channel/UCF4uIIqbIy05Cmzx3rRt_8g" target="_blank">Atif Aslam Songs</a>
+              <br>
+              <a href="https://www.bing.com/videos/search?q=Best+Ghazals+of+All+Time&&view=detail&mid=2A4018A190EB28C0FB492A4018A190EB28C0FB49&&FORM=VRDGAR&ru=%2Fvideos%2Fsearch%3Fq%3DBest%2BGhazals%2Bof%2BAll%2BTime%26FORM%3DRESTAB" target="_blank">Mesmerising Ghazals</a>
+              <br>
+              <a href="https://www.youtube.com/channel/UCbGOvmgYKIY-fQjMvfjyA_Q" target="_blank">Poetry by Priylekha</a>
+              <br>
+          <!--    <a href="https://www.smule.com/___SATYA___/favorites" target="_blank">Melodious_voice</a>
+              <br>-->
+              <a href="#https://www.youtube.com/watch?v=h-En_se9ZbA" target="_blank">Nusrat Fateh Ali Khan</a>
+              <br>
+              <a href="https://www.youtube.com/watch?v=zwUDirVdqYU" target="_blank">Coke Studio India</a>
+              <br>
+              <a href="https://www.youtube.com/watch?v=k6FthKxWObU" target="_blank">Rahat Fateh Ali Khan</a>
+              <br>
+              <a href="https://www.youtube.com/channel/UCnrG75VRwdlp2wtwfpOCBRQ" target="_blank">Sanam Band</a>
+              <br>
+              <a href="https://www.youtube.com/watch?v=1M2gC86Q_9o" target="_blank">Arijit Singh</a>
+              <br>
+              <a href="https://www.youtube.com/watch?v=1M2gC86Q_9o" target="_blank">Mora saiyaan</a>
+              <br>
+              <a href="https://www.youtube.com" target="_blank" class="btn btn-primary">Dive In</a>
+            </div>
+
+      </div>
+  </div>
+</section>
+<!-- About section end-->
+<!--
+{% for project in projects %}
+    <h1>{{project.Title}}</h1>
+    {{project.description}}
+    <br>
+     <a href={{ project.url }} > link </a>
+    <img src="{{ project.image.url }}" alt="serene" width=700 height=400>
+
+{% endfor %}
+<!--saved in projects-->
+<!--Main Display-->
+<section id="poetry">
+  <div class ="container py-4">
+      <p class =" text-center text-capitalize pt-5">Our Grandiose </p>
+      <hr class ="w-25 mx-auto">
+      <br>
+   <div class="row text-center">
+         <div class= "col-lg-4 col-md-4 col-12">
+           <div class="card" >
+            <img class="card-img-top" src="{% static 'songs/poetry.jpg' %}" alt="poetry image">
+            <div class="card-body">
+              <h4 class="card-title">Irshaad</h4>
+              <p class="card-text">Let us immerse into the world of words.</p>
+              <a href="{% url 'poetry:all_poetry' %}" class="btn btn-primary">Dive In</a>
+            </div>
+          </div>
+          </div>
+          <div class= "col-lg-4 col-md-4 col-12">
+            <div class="card" >
+             <img class="card-img-top" src="{% static 'songs/3.jpg' %}" alt="poetry image">
+             <div class="card-body">
+               <h4 class="card-title">Songs</h4>
+               <p class="card-text text-capitalize">language that souls speak </p>
+               <a href="{% url 'songs:sangeet' %}" class="btn btn-primary">Dive In</a>
+             </div>
+           </div>
+           </div>
+           <!--
+           <div class= "col-lg-4 col-md-4 col-12">
+             <div class="card" >
+              <img class="card-img-top" src="{% static 'songs/t.png' %}" alt="Testimonial image">
+              <div class="card-body">
+                <h4 class="card-title">Testimonials</h4>
+                <p class="card-text">Let us immerse into the world of words.</p>
+                <a href="{% url 'testimonials:all_testimonials' %}" class="btn btn-primary">Dive In</a>
+              </div>
+            </div>
+            </div>-->
+   </div>
+</div>
+</section>
+
+{% endblock %}
