@@ -2,14 +2,15 @@
 {% load static %}
 {% block content %}
 
-<section class="container-fluid" >
-    <div class= " row text-center">
-    <img class="img-fluid" src="{% static 'songs/4.jpg' %}" alt="music" >
+<section class="container-fluid " >
+    <div class= "container-fluid py-2 ">
+      <img class="img-fluid" src="{% static 'songs/4.jpg' %}" alt="music" >
       <br>
     </div>
 </section>
-<section class="container" id = "signup">
-  <div class ="row py-2">
+
+<section class="container-fluid py-2"  id = "signup">
+  <div class="container-fluid py-2">
       <h2>{{ error }}</h2>
 
       <form  method = "POST">
@@ -17,10 +18,10 @@
           {% csrf_token %}
           {{ form.as_p }}
 
-      <button type ="submit" class="btn btn-primary">Sign Up</button>
+          <button type ="submit" class="btn btn-info"">Sign Up</button>
         </div>
       </form>
-      </div>
+  </div>
 </section>
 
 

@@ -4,16 +4,18 @@
 {% block content %}
 
 <!--About section-->
-<section class="container" id="home">
-  <div class ="container-fluid">
+<section class="container-fluid" id="home">
+  <div >
       <p class =" text-center text-capitalize pt-5">“Music gives a soul to the universe, wings to the mind, flight to the imagination and life to everything.”</p>
       <hr class ="w-25 mx-auto">
       <p class =" text-center text-capitalize pt-5">“Painting is silent poetry and poetry is painting that speaks.”</p>
       <hr class ="w-25 mx-auto">
       <br>
   </div>
+</section>
 
-<div class="row ">
+<section>
+<div >
   <div class ="container-fluid">
     <h1>Ethereal Music:Healing Ragas</h1>
     <p>A Rendition of Classical Instrumental Fusion Music | Raag Bihag | Indian Classical Music - B. Sivaramakrishna Rao </p>
@@ -64,7 +66,7 @@
               <br>
               <a href="https://www.youtube.com/watch?v=1M2gC86Q_9o" target="_blank">Mora saiyaan</a>
               <br>
-              <a href="https://www.youtube.com" target="_blank" class="btn btn-primary">Dive In</a>
+              <a href="https://www.youtube.com" target="_blank" class="btn btn-info">Dive In</a>
             </div>
 
       </div>
@@ -83,8 +85,8 @@
 <!--saved in projects-->
 <!--Main Display-->
 <section id="poetry">
-  <div class ="container py-4">
-      <p class =" text-center text-capitalize pt-5">Our Grandiose </p>
+  <div class ="container-fluid py-4">
+      <h1 class =" text-center text-capitalize pt-5">Our Grandiose </h1>
       <hr class ="w-25 mx-auto">
       <br>
    <div class="row text-center">
@@ -94,28 +96,32 @@
             <div class="card-body">
               <h4 class="card-title">Irshaad</h4>
               <p class="card-text">Let us immerse into the world of words.</p>
-              <a href="{% url 'poetry:all_poetry' %}" class="btn btn-primary">Dive In</a>
+              <br>
+              <a href="{% url 'poetry:all_poetry' %}" class="btn btn-info">Dive In</a>
             </div>
           </div>
           </div>
+
           <div class= "col-lg-4 col-md-4 col-12">
             <div class="card" >
              <img class="card-img-top" src="{% static 'songs/3.jpg' %}" alt="poetry image">
              <div class="card-body">
                <h4 class="card-title">Songs</h4>
                <p class="card-text text-capitalize">language that souls speak </p>
-               <a href="{% url 'songs:sangeet' %}" class="btn btn-primary">Dive In</a>
+               <br>
+               <a href="{% url 'songs:sangeet' %}" class="btn btn-info">Dive In</a>
              </div>
            </div>
            </div>
-           <!--
+
            <div class= "col-lg-4 col-md-4 col-12">
              <div class="card" >
               <img class="card-img-top" src="{% static 'songs/t.png' %}" alt="Testimonial image">
               <div class="card-body">
                 <h4 class="card-title">Testimonials</h4>
-                <p class="card-text">Let us immerse into the world of words.</p>
-                <a href="{% url 'testimonials:all_testimonials' %}" class="btn btn-primary">Dive In</a>
+                <p class="card-text">Coming Soon</p>
+                <br>
+                <a href="#" class="btn btn-info">Dive In</a>
               </div>
             </div>
             </div>-->

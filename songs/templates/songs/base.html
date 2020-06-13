@@ -8,13 +8,15 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,300;1,300&family=Metal+Mania&display=swap" rel="stylesheet">
+  <!--  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,300;1,300&family=Metal+Mania&display=swap" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
     <title>SurSargam</title>
     <style>
-  /* Make the image fully responsive */
+  /* Make the image fully responsive   margin: 0; padding: 0; font-family: 'Josefin Sans', sans-serif;*/
     *{
 
-      margin: 0; padding: 0; font-family: 'Josefin Sans', sans-serif;;
+
+      margin: 0; padding: 0;  font-family: 'Abel', sans-serif;
     }
 
 
@@ -25,7 +27,7 @@
   </style>
   </head>
   <body>
-  <section class="container-fluid">
+
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">SurSargam</a>
@@ -61,23 +63,23 @@
           </div>
         </li>
 
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Music Portals
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Music Portals
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="https://www.spotify.com/in/" target="_blank" >Spotify</a>
                   <a class="dropdown-item" href="https://www.smule.com/" target="_blank" >Smule for Singing</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="https://www.youtube.com" target= "_blank" >Youtube</a>
-
                 </div>
-              </li>
+        </li>
     </ul>
   </div>
 </nav>
 <!--<embed src="/html/Kalimba.mp3" loop="true" autostart="true" width="2" height="0">-->
+<section class="container-fluid py-3">
+
 <div id="demo" class="carousel slide" data-ride="carousel">
 
   <!-- Indicators -->
@@ -110,7 +112,7 @@
 </div>
 </header>
 </section>
-
+<section class="container-fluid">
 {% if user.is_authenticated  %}
 
 Logged In as {{ user.username }}
@@ -127,7 +129,7 @@ Logged In as {{ user.username }}
 {% endif %}
 <br>
 <br>
-
+</section>
 
 
 {% block content %}{% endblock %}
